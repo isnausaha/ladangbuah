@@ -1,0 +1,148 @@
+:root {
+  --primary: #c14654;
+  --secondary: #d083af;
+  --background: #ffe6ee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+}
+
+.dashboard {
+  padding: 1em 2em;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "header header" "caption image" "tutorial tutorial";
+}
+.dashboard header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.dashboard header .logo:hover {
+  cursor: pointer;
+}
+.dashboard header nav ul {
+  display: flex;
+  gap: 16px;
+}
+.dashboard header nav ul li {
+  list-style: none;
+}
+.dashboard header nav ul li:nth-child(1) {
+  color: black;
+  font-weight: 500;
+}
+.dashboard header nav ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6941176471);
+}
+.dashboard .caption {
+  margin-left: 50px;
+  grid-area: caption;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+.dashboard .caption h1 {
+  font-size: 3em;
+}
+.dashboard .caption p {
+  font-size: 1.2em;
+  padding-bottom: 16px;
+}
+.dashboard img {
+  grid-area: image;
+  object-fit: cover;
+  padding-top: 3em;
+  width: 100%;
+}
+.dashboard .sign-in {
+  background-color: var(--primary);
+  padding: 6px 16px 10px 16px;
+  border-radius: 5em;
+  color: white;
+}
+.dashboard .sign-in:hover {
+  cursor: pointer;
+}
+
+.tutorial {
+  grid-area: tutorial;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.tutorial .title {
+  text-align: center;
+}
+.tutorial .title h1 {
+  font-size: 2em;
+}
+.tutorial .title p {
+  font-size: 1.2em;
+}
+.tutorial .card-container {
+  display: flex;
+  gap: 3em;
+}
+.tutorial .card-container .card {
+  overflow: hidden;
+  clip: auto;
+  width: 250px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3137254902);
+  transition: 0.3s;
+}
+.tutorial .card-container .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2509803922);
+}
+.tutorial .card-container .card img {
+  aspect-ratio: 1;
+  width: 100%;
+  object-fit: cover;
+}
+.tutorial .card-container .card p {
+  padding: 8px 16px;
+}
+
+.fab {
+  position: fixed;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 50px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+}
+.fab:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
